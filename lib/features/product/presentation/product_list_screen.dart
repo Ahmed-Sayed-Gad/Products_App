@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import '../cubits/product_cubit/product_cubit.dart';
-import '../widgets/product_card.dart';
+import '../../../cubits/product_cubit/product_cubit.dart';
+import 'product_card.dart';
 
 class ProductListScreen extends StatelessWidget {
   const ProductListScreen({super.key});
@@ -26,12 +26,12 @@ class ProductListScreen extends StatelessWidget {
                 crossAxisCount: 2,
                 childAspectRatio: 0.72,
                 crossAxisSpacing: 8,
-                mainAxisSpacing: 8,
-              ),
-              itemBuilder: (context, index) => ProductCard(product: products[index]),
+                mainAxisSpacing: 8,),
+              itemBuilder:
+                  (context, index) => ProductCard(product: products[index]),
             );
           } else {
-            return const SizedBox.shrink(); // empty state
+            return const SizedBox.shrink();
           }
         },
       ),
